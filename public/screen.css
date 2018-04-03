@@ -7,3 +7,23 @@ body {
   min-height: 100%;
   font: 16px / 1 sans-serif;
 }
+.board {
+ display: flex;
+ flex-direction: row;
+ color: purple;
+}
+
+.categories{
+display: flex;
+flex-direction: row;
+}
+
+.values{
+  display: flex;
+  flex-direction: column;
+}
+
+.board-footer{
+
+margin: 2em 0em 0em 0em;
+}

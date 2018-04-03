@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>y</title>
-    <link rel="stylesheet" href="/screen.css">
-  </head>
-  <body>
-    <h1>Hello, World!</h1>
-    <script src="/main.js" charset="utf-8"></script>
-  </body>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geopardy</title>
+  <link rel="stylesheet" href="./screen.css">
+</head>
+
+<body ng-app="geopardyApp" ng-controller="mainController">
+  <h1>Geopardy</h1>
+  <!-- main board -->
+  <section class="board">
+    <section class="categories" ng-repeat="cat in categories track by $index">
+      {{cat.title}}
+      <section>
+        <section class="values" ng-repeat="data in categories track by $index">
+          <br>
+          <button ng-click="displayQuestion">{{data.question[0].value}}</button>
+          {{statement.question}}
+        </section>
+      </section>
+    </section>
+    <!-- player area -->
+    <form class="board-footer">
+      Enter answer:
+      <input type="text" name="answser">
+      <br>
+      <input type="submit">
+    </form>
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js "></script>
+    <script src="./main.js " charset="utf-8 "></script>
+</body>
+
 </html>
